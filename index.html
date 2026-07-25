@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsta - BoBoiBoy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="home boboiboy.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <img class="logo" src="file:///C:/Users/user/OneDrive/web boboiboy/monsta nobg.png" alt="Monsta Logo">
+        </div>
+    </header>
+
+    <section class="banner-section">
+    <div class="slider-container">
+        <img class="banner slide active" src="file:///C:/Users/user/OneDrive/web boboiboy/boboiboy_banner.jpg" alt="BoBoiBoy Banner">
+        <img class="banner slide" src="file:///C:/Users/user/OneDrive/web boboiboy/boy_banner1.jpg" alt="BoBoiBoy Banner 1">
+        <img class="banner slide" src="file:///C:/Users/user/OneDrive/web boboiboy/boy_banner2.jpg" alt="BoBoiBoy Banner 2">
+        <img class="banner slide" src="file:///C:/Users/user/OneDrive/web boboiboy/boy_banner3.jpg" alt="BoBoiBoy Banner 3">
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.banner.slide');
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Change image automatically every 4 seconds
+        setInterval(nextSlide, 4000);
+    </script>
+</section>
+
+    <main class="container">
+        
+        <section class="about-section">
+            <img class="content-logo" src="file:///C:/Users/user/OneDrive/web boboiboy/monsta nobg.png" alt="Monsta Logo">
+            
+            <p>Monsta Studios Sdn. Bhd. (formerly Animonsta Studios) is a Malaysian animation production company that produces creative and visual content for the Malaysian and international market. The company was founded on 15 September 2009 by four former Les' Copaque Production staffs.</p>
+            
+            <p>Monsta Studios Sdn. Bhd. (formerly Animonsta Studios) is a leading Malaysian animation company founded on September 15, 2009, by four former Les' Copaque Production staff members: Nizam Razak, Anas Abdul Aziz, Safwan Abd Karim, and Kee Yong Pin. Headquartered in Cyberjaya, the co-founders leveraged their creative experience to build an independent studio dedicated to producing high-quality, action-packed 3D animated content for both local and global markets.</p>
+            
+            <p>The studio achieved massive commercial success with its flagship franchise, BoBoiBoy, which evolved from a hit television series into a regional phenomenon with two record-breaking feature films. Monsta has since expanded its creative footprint into a shared cinematic continuity known as the Power Sphera Universe, which includes the globally acclaimed prequel series Mechamato. Today, the company has grown into a highly diversified media empire, expanding its intellectual properties through extensive merchandising, publishing, and interactive digital experiences on platforms like Roblox.</p>
+        </section>
+<h1>Characters</h1>
+<div class="character-grid">
+    <!-- BoBoiBoy Card -->
+    <div class="char-card">
+        <a href="c_boboiboy.html" class="char-link">
+            <img src="file:///C:/Users/user/OneDrive/web boboiboy/boboiboy.png" alt="BoBoiBoy">
+        </a>
+    </div>
+
+    <!-- Yaya Card -->
+    <div class="char-card">
+        <a href="c_yaya.html" class="char-link">
+            <img src="file:///C:/Users/user/OneDrive/web boboiboy/yaya.png" alt="Yaya">
+        </a>
+    </div>
+
+    <!-- Ying Card -->
+    <div class="char-card">
+        <a href="c_ying.html" class="char-link">
+            <img src="file:///C:/Users/user/OneDrive/web boboiboy/ying.png" alt="Ying">
+        </a>
+    </div>
+
+    <!-- Gopal Card -->
+    <div class="char-card">
+        <a href="c_gopal.html" class="char-link">
+            <img src="file:///C:/Users/user/OneDrive/web boboiboy/gopal (3).png" alt="Gopal">
+        </a>
+    </div>
+
+    <!-- Fang Card -->
+    <div class="char-card">
+        <a href="c_fang.html" class="char-link">
+            <img src="file:///C:/Users/user/OneDrive/web boboiboy/fang.png" alt="Fang">
+        </a>
+    </div>
+
+    <!-- Adu Du Card -->
+    <div class="char-card">
+        <a href="c_adadu.html" class="char-link">
+            <img src="file:///C:/Users/user/OneDrive/web boboiboy/adudu.png" alt="Adu Du">
+        </a>
+    </div>
+
+    <!-- Papa Zola Card -->
+    <div class="char-card">
+        <a href="c_papazola.html" class="char-link">
+            <img src="file:///C:/Users/user/OneDrive/web boboiboy/papazola.png" alt="Papa Zola">
+        </a>
+    </div>
+
+    <!-- Ochobot Card -->
+    <div class="char-card">
+        <a href="c_ochobot.html" class="char-link">
+            <img src="file:///C:/Users/user/OneDrive/web boboiboy/ochobot.png" alt="Ochobot">
+        </a>
+    </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="characterModal" class="char-modal">
+    <div class="char-modal-content">
+        <span class="char-modal-close">&times;</span>
+        <div id="modalBody">
+            <!-- Dynamic modal content goes here -->
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle smooth modal popups while keeping default links as a fallback
+    document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("characterModal");
+        const modalBody = document.getElementById("modalBody");
+        const closeBtn = document.querySelector(".char-modal-close");
+        const links = document.querySelectorAll(".char-link");
+
+        links.forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                const charName = this.querySelector("img").getAttribute("alt");
+                const imgSrc = this.querySelector("img").getAttribute("src");
+                
+                modalBody.innerHTML = `
+                    <img src="${imgSrc}" alt="${charName}" style="width: 120px; height: auto; border-radius: 8px; margin-bottom: 15px;">
+                    <h2 style="margin: 0 0 10px 0; font-size: 1.8rem;">${charName}</h2>
+                    <p style="color: #ccc; margin-bottom: 20px;">Detailed information profile for ${charName} goes here.</p>
+                    <a href="${this.getAttribute("href")}" style="background: #ffffff; color: #000; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: bold;">Full Profile Page</a>
+                `;
+                modal.style.display = "flex";
+            });
+        });
+
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+</script>
+    </main>
+
+    <!-- Music Player Section at the Bottom -->
+    <footer style="text-align: center; padding: 20px; background: rgba(0, 0, 0, 0.8); margin-top: 40px;">
+        <p style="color: #fff; margin-bottom: 10px; font-family: sans-serif; font-size: 0.9rem;">🎵 BoBoiBoy Theme Song</p>
+        <audio controls autoplay loop style="width: 300px;">
+            <source src="file:///C:/Users/user/OneDrive/web boboiboy/lagu boboiboy.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </footer>
+
+    <script>
+        // Automatically plays the audio upon the user's first click anywhere on the page
+        document.addEventListener('click', function() {
+            const audio = document.querySelector('audio');
+            if (audio && audio.paused) {
+                audio.play().catch(error => console.log("Autoplay prevented:", error));
+            }
+        }, { once: true });
+    </script>
+</body>
+</html>

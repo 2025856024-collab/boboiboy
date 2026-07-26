@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Menu</title>
+    <title>BoBoiBoy - BoBoiBoy Universe</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="menu boboiboy.css" rel="stylesheet" type="text/css">
+    <link href="c_boboiboy.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
     <div class="page-layout">
+        <!-- Sidebar Navigation Menu -->
         <nav class="sidebar-menu" id="sidebarMenu">
             <div class="menu-header">
                 <div class="hamburger-icon" onclick="toggleMenu()">
@@ -24,33 +27,30 @@
                 <li><a href="index.html" target="content-frame" class="main-link" onclick="toggleMenu()">HOME</a></li>
                 <li>
                     <span class="main-link">CHARACTERS</span>
-                  <ul class="menu-list">
-    <li><a href="index.html" target="content-frame" class="main-link" onclick="toggleMenu()">HOME</a></li>
-    <li>
-        <span class="main-link">CHARACTERS</span>
-        <ul class="submenu-list">
-            <!-- Ensure this points directly to your BoBoiBoy page -->
-            <li><a href="c_boboiboy.html" target="content-frame" onclick="toggleMenu()">BOBOIBOY</a></li>
-            <li><a href="c_yaya.html" target="content-frame" onclick="toggleMenu()">YAYA</a></li>
-            <li><a href="c_ying.html" target="content-frame" onclick="toggleMenu()">YING</a></li>
-            <li><a href="c_gopal.html" target="content-frame" onclick="toggleMenu()">GOPAL KUMAR</a></li>
-            <li><a href="c_fang.html" target="content-frame" onclick="toggleMenu()">FANG</a></li>
-            <li><a href="c_adadu.html" target="content-frame" onclick="toggleMenu()">ADU DU</a></li>
-            <li><a href="c_papazola.html" target="content-frame" onclick="toggleMenu()">PAPA ZOLA</a></li>
-            <li><a href="c_ochobot.html" target="content-frame" onclick="toggleMenu()">OCHOBOT</a></li>
-        </ul>
-    </li>
-</ul>
+                    <ul class="submenu-list">
+                        <li><a href="c_boboiboy.html" target="content-frame" onclick="toggleMenu()">BOBOIBOY</a></li>
+                        <li><a href="c_yaya.html" target="content-frame" onclick="toggleMenu()">YAYA</a></li>
+                        <li><a href="c_ying.html" target="content-frame" onclick="toggleMenu()">YING</a></li>
+                        <li><a href="c_gopal.html" target="content-frame" onclick="toggleMenu()">GOPAL KUMAR</a></li>
+                        <li><a href="c_fang.html" target="content-frame" onclick="toggleMenu()">FANG</a></li>
+                        <li><a href="c_adadu.html" target="content-frame" onclick="toggleMenu()">ADU DU</a></li>
+                        <li><a href="c_papazola.html" target="content-frame" onclick="toggleMenu()">PAPA ZOLA</a></li>
+                        <li><a href="c_ochobot.html" target="content-frame" onclick="toggleMenu()">OCHOBOT</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
 
+        <!-- Floating Menu Toggle Button -->
         <div class="menu-toggle-btn" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
 
+        <!-- Main Content Area with Iframe -->
         <main class="main-content">
-            <iframe src="index.html" name="content-frame" title="Main Content"></iframe>
+            <iframe src="c_boboiboy.html" name="content-frame" title="Main Content"></iframe>
         </main>
     </div>
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="menu boboiboy.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class="page-layout">
+        <nav class="sidebar-menu" id="sidebarMenu">
+            <div class="menu-header">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h2>MENU</h2>
+            </div>
+
+            <ul class="menu-list">
+                <li><a href="index.html" target="content-frame" class="main-link" onclick="toggleMenu()">HOME</a></li>
+                <li>
+                    <span class="main-link">CHARACTERS</span>
+                    <ul class="submenu-list">
+                        <li><a href="c_boboiboy.html" target="content-frame" onclick="toggleMenu()">BOBOIBOY</a></li>
+                        <li><a href="c_yaya.html" target="content-frame" onclick="toggleMenu()">YAYA</a></li>
+                        <li><a href="c_ying.html" target="content-frame" onclick="toggleMenu()">YING</a></li>
+                        <li><a href="c_gopal.html" target="content-frame" onclick="toggleMenu()">GOPAL KUMAR</a></li>
+                        <li><a href="c_fang.html" target="content-frame" onclick="toggleMenu()">FANG</a></li>
+                        <li><a href="c_adadu.html" target="content-frame" onclick="toggleMenu()">ADU DU</a></li>
+                        <li><a href="c_papazola.html" target="content-frame" onclick="toggleMenu()">PAPA ZOLA</a></li>
+                        <li><a href="c_ochobot.html" target="content-frame" onclick="toggleMenu()">OCHOBOT</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <main class="main-content">
+            <iframe src="index.html" name="content-frame" title="Main Content"></iframe>
+        </main>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebarMenu');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

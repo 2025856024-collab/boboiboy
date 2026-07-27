@@ -1,19 +1,24 @@
 @charset "utf-8";
 /* CSS Document */
 
+@charset "utf-8";
+/* CSS Document */
+
+/* --- RESET & GLOBAL STYLES --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+html, body {
     background-color: #000000;
     color: #ffffff;
-    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    min-height: 100vh;
 }
 
 .container {
@@ -25,7 +30,7 @@ body {
 /* --- SECTION 1: HERO / SLIDER --- */
 .hero-section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -44,26 +49,12 @@ body {
     z-index: 10;
 }
 
-.menu-icon {
-    cursor: pointer;
-    margin-right: 30px;
-}
-
-.menu-icon span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background-color: #ffffff;
-    margin: 6px 0;
-    transition: 0.3s;
-}
-
 .logo {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 2px;
-	padding-left: 20px;
-	margin-top: -20px;
+    padding-left: 20px;
+    margin-top: -20px;
 }
 
 .slider-container {
@@ -110,7 +101,7 @@ body {
 }
 
 .hero-img {
-    max-width: 1000%;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
 }
@@ -156,16 +147,17 @@ body {
     background-color: #e0e0e0;
     transform: translateY(-2px);
 }
+
 /* --- SECTION 2: DESCRIPTION --- */
 .description-section {
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 40px;
+    padding: 60px 40px;
 }
 
 .desc-container {
@@ -175,7 +167,6 @@ body {
     gap: 40px;
     width: 100%;
     max-width: 1200px;
-    height: 100%;
 }
 
 .desc-text {
@@ -191,7 +182,7 @@ body {
 .desc-text p {
     font-size: 15px;
     color: #ffffff;
-    margin-bottom: 0;
+    margin-bottom: 15px;
     text-align: justify;
     font-weight: 400;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
@@ -207,7 +198,6 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 2;
-    height: 100%;
 }
 
 .desc-image img {
@@ -218,6 +208,7 @@ body {
     object-fit: contain;
     filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.6));
 }
+
 /* --- SECTION 3: EVOLUTION --- */
 .evolution-section {
     background-color: #000000;
@@ -229,7 +220,7 @@ body {
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 30px;
-	margin-top: 100px;
+    margin-top: 100px;
 }
 
 .evolution-grid {
@@ -238,26 +229,22 @@ body {
     gap: 60px;
 }
 
-
-
 .card-img-holder img {
     max-height: 80%;
     max-width: 80%;
     width: auto;
     object-fit: contain;
-	text-align: center;
+    text-align: center;
 }
 
 .evolution-card h3 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
-	margin-top: 40px;
+    margin-top: 40px;
     letter-spacing: 0.5px;
-    position:center;
-    top: -30px;
     z-index: 2;
-	text-align: center;
+    text-align: center;
 }
 
 .evolution-card p {
@@ -267,11 +254,10 @@ body {
     line-height: 1.7;
     max-width: 420px;
     margin: 0 auto;
-    position: center;
-    top: -30px;
     z-index: 2;
-	text-align: center;
+    text-align: center;
 }
+
 /* --- SECTION 4: VOICE ACTOR --- */
 .voice-actor-section {
     background-size: cover;
@@ -380,17 +366,11 @@ body {
 .signature-card p {
     font-size: 13.5px;
     color: #e0e0e0;
-    font-weight: 20;
+    font-weight: 300;
     line-height: 1.5;
     text-align: justify;
 }
 
-/* Responsive design adjustment */
-@media (max-width: 992px) {
-    .signature-grid {
-        justify-content: center;
-    }
-}
 /* --- SECTION 6: STRENGTH (STATS) --- */
 .strength-section {
     background-color: #000000;
@@ -435,16 +415,16 @@ body {
     height: 35px;
     background-color: #a8a8a8;
     position: relative;
+    overflow: hidden;
 }
 
 .stat-bar-fill {
-    width: 0%; /* Start at 0 width */
+    width: 0%;
     height: 100%;
     background-color: #c71585;
-    transition: width 1.2s cubic-bezier(0.1, 0.9, 0.2, 1); /* Smooth easing effect */
+    transition: width 1.2s cubic-bezier(0.1, 0.9, 0.2, 1);
 }
 
-/* Class added via JavaScript when scrolled into view */
 .strength-section.animated .stat-bar-fill {
     width: var(--target-width);
 }
@@ -469,7 +449,7 @@ body {
         gap: 50px;
     }
     .hero-section {
-        height: auto;
+        min-height: auto;
         padding-bottom: 50px;
     }
     .va-image-wrapper {
@@ -478,6 +458,7 @@ body {
     }
     .signature-grid {
         justify-content: center;
+        flex-wrap: wrap;
     }
     .stat-row {
         flex-direction: column;

@@ -6,9 +6,46 @@
     <title>Fang - BoBoiBoy Universe</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="menu boboiboy.css" rel="stylesheet" type="text/css">
     <link href="c_fang.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
+    <!-- Sidebar Navigation Menu -->
+    <nav class="sidebar-menu" id="sidebarMenu">
+        <div class="menu-header">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h2>MENU</h2>
+        </div>
+
+        <ul class="menu-list">
+            <li><a href="index.html" class="main-link" onclick="toggleMenu()">HOME</a></li>
+            <li>
+                <span class="main-link">CHARACTERS</span>
+                <ul class="submenu-list">
+                    <li><a href="c_boboiboy.html" onclick="toggleMenu()">BOBOIBOY</a></li>
+                    <li><a href="c_yaya.html" onclick="toggleMenu()">YAYA</a></li>
+                    <li><a href="c_ying.html" onclick="toggleMenu()">YING</a></li>
+                    <li><a href="c_gopal.html" onclick="toggleMenu()">GOPAL KUMAR</a></li>
+                    <li><a href="c_fang.html" onclick="toggleMenu()">FANG</a></li>
+                    <li><a href="c_adadu.html" onclick="toggleMenu()">ADU DU</a></li>
+                    <li><a href="c_papazola.html" onclick="toggleMenu()">PAPA ZOLA</a></li>
+                    <li><a href="c_ochobot.html" onclick="toggleMenu()">OCHOBOT</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Floating Menu Toggle Button -->
+    <div class="menu-toggle-btn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
     <header class="hero-section" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('fangbg.jpg');">
         <nav class="navbar">
@@ -170,6 +207,14 @@
                 observer.observe(section);
             }
         });
+    </script>
+
+    <!-- Script for Sidebar Menu Toggle -->
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebarMenu');
+            sidebar.classList.toggle('active');
+        }
     </script>
 
 </body>

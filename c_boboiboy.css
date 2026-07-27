@@ -1,8 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-
-
 /* --- RESET & GLOBAL STYLES --- */
 * {
     margin: 0;
@@ -10,14 +8,13 @@
     box-sizing: border-box;
 }
 
-html, body {
+body {
+    font-family: 'Poppins', sans-serif;
     background-color: #000000;
     color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
     overflow-x: hidden;
-    overflow-y: auto !important; /* Enables vertical scrolling */
-    min-height: 100vh;
+    line-height: 1.6;
+    align-items: center;
 }
 
 .container {
@@ -29,7 +26,7 @@ html, body {
 /* --- SECTION 1: HERO / SLIDER --- */
 .hero-section {
     position: relative;
-    min-height: 100vh; /* Changed from height: 100vh */
+    height: 100vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -48,12 +45,26 @@ html, body {
     z-index: 10;
 }
 
+.menu-icon {
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
 .logo {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 2px;
-    padding-left: 20px;
-    margin-top: -20px;
+	padding-left: 20px;
+	margin-top: -20px;
 }
 
 .slider-container {
@@ -151,12 +162,12 @@ html, body {
 .description-section {
     background-size: cover;
     background-position: center;
-    min-height: 100vh; /* Changed from height: 100vh */
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 40px;
+    padding: 0 40px;
 }
 
 .desc-container {
@@ -166,6 +177,7 @@ html, body {
     gap: 40px;
     width: 100%;
     max-width: 1200px;
+    height: 100%;
 }
 
 .desc-text {
@@ -181,10 +193,14 @@ html, body {
 .desc-text p {
     font-size: 15px;
     color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     text-align: justify;
     font-weight: 400;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.desc-text p:last-child {
+    margin-bottom: 0;
 }
 
 .desc-image {
@@ -193,6 +209,7 @@ html, body {
     justify-content: center;
     align-items: center;
     z-index: 2;
+    height: 100%;
 }
 
 .desc-image img {
@@ -203,7 +220,6 @@ html, body {
     object-fit: contain;
     filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.6));
 }
-
 /* --- SECTION 3: EVOLUTION --- */
 .evolution-section {
     background-color: #000000;
@@ -240,6 +256,7 @@ html, body {
 .card-img-holder img {
     max-height: 100%;
     max-width: 100%;
+    width: 1000px;
     object-fit: contain;
 }
 
@@ -314,66 +331,128 @@ html, body {
 }
 
 /* --- SECTION 5: STRENGTH (STATS) --- */
-.strength-section {
-    background-color: #000000;
-    padding: 100px 0 120px 0;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-.strength-description {
-    font-size: 15px;
-    color: #aaaaaa;
-    font-weight: 300;
-    max-width: 1000px;
-    margin-bottom: 50px;
-    line-height: 1.6;
-}
+        .strength-section {
+            background-color: #000000;
+            padding: 100px 0 120px 0;
+        }
 
-.stats-card {
-    background-color: #e2e2e2;
-    padding: 40px;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-}
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-.stat-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
+        .section-title {
+            color: #ffffff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
 
-.stat-row:last-child {
-    margin-bottom: 0;
-}
+        .strength-description {
+            font-size: 15px;
+            color: #aaaaaa;
+            font-weight: 300;
+            max-width: 1000px;
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
 
-.stat-label {
-    flex: 0.25;
-    color: #333333;
-    font-size: 18px;
-    font-weight: 600;
-}
+        .stats-card {
+            background-color: #e2e2e2;
+            padding: 40px;
+            border-radius: 4px;
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box;
+        }
 
-.stat-bar-container {
-    flex: 0.75;
-    height: 35px;
-    background-color: #a8a8a8;
-    position: relative;
-    overflow: hidden;
-}
+        .stat-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
 
-.stat-bar-fill {
-    width: 0%;
-    height: 100%;
-    background-color: #cc3c3c;
-    transition: width 1.2s cubic-bezier(0.1, 0.9, 0.2, 1);
-}
+        .stat-row:last-child {
+            margin-bottom: 0;
+        }
 
-.strength-section.animated .stat-bar-fill {
-    width: var(--target-width);
+        .stat-label {
+            flex: 0.25;
+            color: #333333;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .stat-bar-container {
+            flex: 0.75;
+            height: 35px;
+            background-color: #a8a8a8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-bar-fill {
+            width: 0%; /* Starts at 0% for scroll animation */
+            height: 100%;
+            background-color: #cc3c3c;
+            transition: width 1.2s cubic-bezier(0.1, 0.9, 0.2, 1);
+        }
+
+        /* Triggered when JavaScript adds the 'animated' class */
+        .strength-section.animated .stat-bar-fill {
+            width: var(--target-width);
+        }
+    </style>
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 992px) {
+    .slide-content, .desc-container, .va-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .desc-text p, .va-text p {
+        text-align: center;
+    }
+    .hero-text {
+        padding-right: 0;
+    }
+    .hero-text p {
+        margin: 0 auto 30px auto;
+    }
+    .evolution-grid {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .hero-section {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .va-image-wrapper {
+        max-width: 350px;
+        margin: 0 auto 30px auto;
+    }
+    .stat-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .stat-label {
+        width: 100%;
+    }
+    .stat-bar-container {
+        width: 100%;
+    }
 }
 
 /* --- SECTION: ELEMENTAL SPLIT --- */
 .elemental-split-section {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('C:/Users/user/OneDrive/web boboiboy/bg petir.jpg');
     padding: 100px 0;
     position: relative;
     background-size: cover;
@@ -384,6 +463,16 @@ html, body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
+}
+
+.elemental-description {
+    font-size: 15px;
+    color: #e0e0e0;
+    font-weight: 300;
+    max-width: 1100px;
+    margin-bottom: 40px;
+    text-align: justify;
+    line-height: 1.7;
 }
 
 .element-icons-grid {
@@ -410,6 +499,56 @@ html, body {
     transition: transform 0.2s, background 0.2s, border-color 0.2s;
 }
 
+.element-icon-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.element-icon-card:hover {
+    transform: scale 2;
+    background: rgba(255, 255, 255, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 0 20px rgba(243, 156, 18, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* --- SIDEBAR TABS --- */
+.sidebar-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    justify-content: flex-start;
+}
+
+.tablinks {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tablinks:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.tablinks.active {
+    background: #cc3c3c;
+    border-color: #cc3c3c;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(204, 60, 60, 0.5);
+}
+
 .element-showcase {
     display: flex;
     align-items: center;
@@ -417,11 +556,81 @@ html, body {
     gap: 40px;
 }
 
-/* --- SECTION: WEAPONS --- */
+.element-info-text {
+    flex: 1.2;
+}
+
+.element-info-text h3 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+#element-title-img {
+    height: 270px;
+    width: auto;
+    object-fit: contain;
+    margin-top: -89px;
+    padding-left: 70px;
+}
+
+#element-desc-1 {
+    font-size: 15px;
+    color: #e0e0e0;
+    font-weight: 300;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-top: -100px;
+}
+
+#element-desc-2 {
+    font-size: 15px;
+    color: #e0e0e0;
+    font-weight: 300;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.element-character-img {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+#element-char-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.8));
+}
+
+@media (max-width: 992px) {
+    .element-showcase {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .element-info-text p {
+        text-align: center !important;
+    }
+    .element-icons-grid, .sidebar-tabs {
+        justify-content: center !important;
+    }
+}
+
+/* --- SECTION: BOBOIBOY WEAPONS --- */
 .weapons-section {
     position: relative;
     background-size: cover;
     background-position: center;
+}
+
+.weapons-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 .weapons-grid {
@@ -444,22 +653,19 @@ html, body {
     transition: transform 0.2s ease, background 0.2s, border-color 0.2s;
 }
 
+.weapon-card:hover {
+    transform: scale(1.03);
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
 .weapon-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* --- RESPONSIVE MEDIA QUERIES --- */
 @media (max-width: 992px) {
-    .slide-content, .desc-container, .va-content, .element-showcase {
-        flex-direction: column;
-        text-align: center;
-    }
-    .evolution-grid {
-        flex-direction: column;
-        gap: 50px;
-    }
     .weapons-grid {
         grid-template-columns: repeat(2, 1fr);
     }

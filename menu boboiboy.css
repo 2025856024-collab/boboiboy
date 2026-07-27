@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* Sidebar Container Overlay */
 .sidebar-menu {
     position: fixed;
     top: 0;
@@ -23,7 +24,6 @@
     z-index: 99999;
     cursor: pointer;
 }
-
 .menu-toggle-btn span {
     display: block;
     height: 3px;

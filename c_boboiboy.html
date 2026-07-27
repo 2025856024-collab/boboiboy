@@ -6,46 +6,9 @@
     <title>BoBoiBoy - BoBoiBoy Universe</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="menu boboiboy.css" rel="stylesheet" type="text/css">
     <link href="c_boboiboy.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-    <!-- Sidebar Navigation Menu -->
-    <nav class="sidebar-menu" id="sidebarMenu">
-        <div class="menu-header">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <h2>MENU</h2>
-        </div>
-
-        <ul class="menu-list">
-            <li><a href="index.html" target="_parent" class="main-link" onclick="toggleMenu()">HOME</a></li>
-            <li>
-                <span class="main-link">CHARACTERS</span>
-                <ul class="submenu-list">
-                    <li><a href="c_boboiboy.html" target="_self" onclick="toggleMenu()">BOBOIBOY</a></li>
-                    <li><a href="c_yaya.html" target="_self" onclick="toggleMenu()">YAYA</a></li>
-                    <li><a href="c_ying.html" target="_self" onclick="toggleMenu()">YING</a></li>
-                    <li><a href="c_gopal.html" target="_self" onclick="toggleMenu()">GOPAL KUMAR</a></li>
-                    <li><a href="c_fang.html" target="_self" onclick="toggleMenu()">FANG</a></li>
-                    <li><a href="c_adadu.html" target="_self" onclick="toggleMenu()">ADU DU</a></li>
-                    <li><a href="c_papazola.html" target="_self" onclick="toggleMenu()">PAPA ZOLA</a></li>
-                    <li><a href="c_ochobot.html" target="_self" onclick="toggleMenu()">OCHOBOT</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Floating Menu Toggle Button -->
-    <div class="menu-toggle-btn" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
 
     <header class="hero-section" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('boboiboy bg.jpg');">
         <nav class="navbar">
@@ -53,7 +16,7 @@
         </nav>
 
         <div class="slider-container">
-            <a href="index.html" target="_parent">
+            <a href="index.html">
                 <button class="arrow-btn prev-btn">
                     <img src="kiri.png" alt="Previous">
                 </button>
@@ -69,7 +32,7 @@
                 </div>
             </div>
 
-            <a href="c_yaya.html" target="_self">
+            <a href="c_yaya.html">
                 <button class="arrow-btn next-btn">
                     <img src="kanan.png" alt="Next">
                 </button>
@@ -178,7 +141,6 @@
         </div>
     </section>
 
-    <!-- Embedded JavaScript for Scroll Animation -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const section = document.querySelector(".strength-section");
@@ -351,139 +313,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        function toggleMenu() {
-            const sidebar = document.getElementById('sidebarMenu');
-            sidebar.classList.toggle('active');
-        }
-    </script>
-
-</body>
-</html>
-                        BoBoiBoy Lightning is the high-speed elemental form of BoBoiBoy, embodying raw kinetic energy and intense power. Defined by his signature yellow color scheme and lightning-bolt motifs, this form grants him incredible velocity, allowing him to overwhelm opponents with lightning-fast strikes that are nearly impossible to track.
-                    </p>
-                    <p id="element-desc-2" style="font-size: 15px; color: #e0e0e0; font-weight: 300; line-height: 1.7; text-align: justify;">
-                        His personality in this form is notably impulsive and short-tempered, reflecting a desire to resolve conflicts instantly. While his rapid-fire agility is a major asset in combat, his tendency to favor speed over strategy can occasionally be a liability. Nevertheless, he remains a vital, aggressive offensive force in every battle.
-                    </p>
-                </div>
-                <div class="element-character-img" style="flex: 0.8; display: flex; justify-content: center;">
-                    <img id="element-char-img" src="boy petir.png" alt="BoBoiBoy Lightning" style="max-width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.8));">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-    const elementalData = {
-        lightning: {
-            titleImg: "lightning.png",
-            charImg: "boy petir.png",
-            desc1: "BoBoiBoy Lightning is the high-speed elemental form of BoBoiBoy, embodying raw kinetic energy and intense power. Defined by his signature yellow color scheme and lightning-bolt motifs, this form grants him incredible velocity, allowing him to overwhelm opponents with lightning-fast strikes that are nearly impossible to track.",
-            desc2: "His personality in this form is notably impulsive and short-tempered, reflecting a desire to resolve conflicts instantly. While his rapid-fire agility is a major asset in combat, his tendency to favor speed over strategy can occasionally be a liability. Nevertheless, he remains a vital, aggressive offensive force in every battle."
-        },
-        wind: {
-            titleImg: "windd.png", 
-            charImg: "boy angin.png",
-            desc1: "BoBoiBoy Angin (Wind) is one of the original first-tier elemental forms of BoBoiBoy, powered by the elemental ability of aerokinesis to generate and manipulate air currents. Unlike his more serious counterparts, Wind is characterized by a cheerful, carefree, and playful demeanor, though he famously harbors a fear of snakes and has a hidden talent for baking. Visually, his design features a striking dark blue and bright blue color scheme introduced in BoBoiBoy Galaxy to match his element.",
-            desc2: "In combat, he relies heavily on high speed, agility, and aerial mobility, using abilities like wind blasts, compressed air spheres, and high-speed air-surfing to outmaneuver opponents before eventually evolving into his powerful second-tier form, BoBoiBoy Cyclone."
-        },
-        earth: {
-            titleImg: "earth.png",
-            charImg: "boy tanah.png",
-            desc1: "BoBoiBoy Earth is the foundational defensive and physical power form, enabling him to manipulate solid ground, rock formations, and geological structures.",
-            desc2: "Known for his stable, calm, and resilient demeanor, Earth forms the defensive bedrock for the team, absorbing heavy impacts and protecting his allies from harm."
-        },
-        fire: {
-            titleImg: "fire1.png",
-            charImg: "boy fire.png",
-            desc1: "BoBoiBoy Fire harnesses explosive thermal energy and blazing flames, bringing intense offensive heat and destructive burning power to the battlefield.",
-            desc2: "His fiery personality is hot-headed, passionate, and fiercely competitive, driving him to rush into the heat of action with overwhelming enthusiasm."
-        },
-        water: {
-            titleImg: "water.png",
-            charImg: "boy air.png", 
-            desc1: "BoBoiBoy Water controls liquid states, fluid dynamics, and healing properties, providing flexible combat options ranging from soothing relief to crushing tidal waves.",
-            desc2: "Calm, composed, and deeply empathetic, Water handles conflicts with a tranquil attitude while maintaining immense hidden depths of strength."
-        },
-        leaf: {
-            titleImg: "leaf1.png",
-            charImg: "boy daun.png",
-            desc1: "BoBoiBoy Leaf commands flora, vines, and nature's growth, enabling him to immobilize enemies and utilize dynamic plant-based movement capabilities.",
-            desc2: "Playful, innocent, and deeply connected to nature, Leaf brings a vibrant energy to the team, though his childlike innocence hides surprising tactical utility."
-        },
-        solar: {
-            titleImg: "solar.png",
-            charImg: "boy solar.png",
-            desc1: "BoBoiBoy Solar channels blinding light and stellar radiation, mastering high-intensity energy beams and incredible luminescence to blind and pierce through adversaries.",
-            desc2: "Confident, sophisticated, and proud, Solar carries himself with an air of brilliance and style, matching his blindingly powerful energy attacks."
-        }
-    };
-
-    function switchElement(elementKey) {
-        const data = elementalData[elementKey];
-        if (!data) return;
-        
-        document.getElementById('element-title-img').src = data.titleImg;
-        document.getElementById('element-char-img').src = data.charImg;
-        document.getElementById('element-desc-1').innerText = data.desc1;
-        document.getElementById('element-desc-2').innerText = data.desc2;
-
-        document.querySelectorAll('.element-icon-card').forEach(card => card.classList.remove('active'));
-        event.currentTarget.classList.add('active');
-    }
-
-    function openAbility(evt, abilityName) {
-        document.querySelectorAll('.tablinks').forEach(tab => tab.classList.remove('active'));
-        evt.currentTarget.classList.add('active');
-    }
-    </script>
-
-    <section class="weapons-section" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('wep_boy.jpg'); padding: 100px 0; position: relative; background-size: cover; background-position: center;">
-        <div class="container weapons-container">
-            <h2 class="section-title">BOBOIBOY WEAPONS</h2>
-            <div class="weapons-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
-                <div class="weapon-card" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; overflow: hidden; aspect-ratio: 1 / 1; display: flex; justify-content: center; align-items: center; transition: transform 0.2s ease, background 0.2s, border-color 0.2s;">
-                    <img src="jam.jpg" alt="Power Sphere / Watch" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-
-                <div class="weapon-card" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; overflow: hidden; aspect-ratio: 1 / 1; display: flex; justify-content: center; align-items: center; transition: transform 0.2s ease, background 0.2s, border-color 0.2s;">
-                    <img src="keris.jpg" alt="Lightning Weapon" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-
-                <div class="weapon-card" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; overflow: hidden; aspect-ratio: 1 / 1; display: flex; justify-content: center; align-items: center; transition: transform 0.2s ease, background 0.2s, border-color 0.2s;">
-                    <img src="bola.jpg" alt="Wind Weapon" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-
-                <div class="weapon-card" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; overflow: hidden; aspect-ratio: 1 / 1; display: flex; justify-content: center; align-items: center; transition: transform 0.2s ease, background 0.2s, border-color 0.2s;">
-                    <img src="tanah_katup.jpg" alt="Earth Weapon" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-
-                <div class="weapon-card" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; overflow: hidden; aspect-ratio: 1 / 1; display: flex; justify-content: center; align-items: center; transition: transform 0.2s ease, background 0.2s, border-color 0.2s;">
-                    <img src="bakar.jpg" alt="Fire Weapon" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-
-                <div class="weapon-card" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; overflow: hidden; aspect-ratio: 1 / 1; display: flex; justify-content: center; align-items: center; transition: transform 0.2s ease, background 0.2s, border-color 0.2s;">
-                    <img src="senapang_ice.jpg" alt="Water/Ice Weapon" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-
-                <div class="weapon-card" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; overflow: hidden; aspect-ratio: 1 / 1; display: flex; justify-content: center; align-items: center; transition: transform 0.2s ease, background 0.2s, border-color 0.2s;">
-                    <img src="dedaun.jpg" alt="Leaf Weapon" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-
-                <div class="weapon-card" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; overflow: hidden; aspect-ratio: 1 / 1; display: flex; justify-content: center; align-items: center; transition: transform 0.2s ease, background 0.2s, border-color 0.2s;">
-                    <img src="pedang.jpg" alt="Solar Weapon" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        function toggleMenu() {
-            const sidebar = document.getElementById('sidebarMenu');
-            sidebar.classList.toggle('active');
-        }
-    </script>
 
 </body>
 </html>

@@ -1,9 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-@charset "utf-8";
-/* CSS Document */
-
 /* --- RESET & GLOBAL STYLES --- */
 * {
     margin: 0;
@@ -16,9 +13,11 @@ html, body {
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
+    /* ENSURE SCROLLING IS ENABLED */
     overflow-x: hidden;
     overflow-y: auto !important;
     min-height: 100vh;
+    height: auto !important;
 }
 
 .container {
@@ -30,7 +29,7 @@ html, body {
 /* --- SECTION 1: HERO / SLIDER --- */
 .hero-section {
     position: relative;
-    min-height: 100vh;
+    min-height: 100vh; /* Changed from height: 100vh to allow overflow */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -152,12 +151,12 @@ html, body {
 .description-section {
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Changed from height: 100vh */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 40px;
+    padding: 80px 40px;
 }
 
 .desc-container {

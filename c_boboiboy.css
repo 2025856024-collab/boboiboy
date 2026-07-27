@@ -13,9 +13,8 @@ html, body {
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    /* ALLOW NATURAL SCROLLING */
     overflow-x: hidden;
-    overflow-y: auto !important;
+    overflow-y: auto !important; /* Enables vertical scrolling */
     min-height: 100vh;
 }
 

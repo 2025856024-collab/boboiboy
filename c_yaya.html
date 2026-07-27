@@ -12,7 +12,7 @@
 <body>
 
     <!-- Sidebar Navigation Menu -->
-    <nav class="sidebar-menu" id="sidebarMenu" style="position: fixed; z-index: 99999;">
+    <nav class="sidebar-menu" id="sidebarMenu">
         <div class="menu-header">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
@@ -41,7 +41,7 @@
     </nav>
 
     <!-- Floating Menu Toggle Button -->
-    <div class="menu-toggle-btn" onclick="toggleMenu()" style="position: fixed; top: 20px; left: 20px; z-index: 99999; cursor: pointer;">
+    <div class="menu-toggle-btn" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
@@ -209,11 +209,11 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         section.classList.add("animated");
-                        observer.unobserve(entry.target); // Animates only once when scrolled into view
+                        observer.unobserve(entry.target);
                     }
                 });
             }, {
-                threshold: 0.3 // Triggers when 30% of the section is visible
+                threshold: 0.3
             });
 
             if (section) {
